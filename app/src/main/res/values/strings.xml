@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">VideoViewerVK</string>
+    <string name="duration_placeholder">Duration Placeholder</string>
+    <string name="title_placeholder">Title Placeholder</string>
+</resources>
