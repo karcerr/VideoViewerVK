@@ -51,7 +51,7 @@ class VideoAdapter (
         private val onVideoClicked: (Video) -> Unit
     ): RecyclerView.ViewHolder(binding.root) {
         fun bind(video: Video) {
-            binding.title.text = video.title
+            binding.title.text = if(video.title.length >= 20) video.title.substring(0, 20) + "..." else video.title
             binding.duration.text = video.duration
             Glide.with(binding.root.context)
                 .load(video.thumbnailUrl)

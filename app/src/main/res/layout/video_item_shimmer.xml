@@ -6,7 +6,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/dark_gray"
         android:background="@drawable/round_corners"
-        android:layout_marginBottom="25dp"
+        android:layout_marginVertical="12dp"
         android:layout_marginHorizontal="5dp"
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/relative_layout"
@@ -14,7 +14,7 @@
     <ImageView
             android:id="@+id/cover_image"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="200dp"
             android:adjustViewBounds="true"
             android:background="@drawable/round_corners"
             android:backgroundTint="@color/lighter_gray"

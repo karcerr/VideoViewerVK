@@ -3,11 +3,12 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.hilt.plugin)
+    alias(libs.plugins.safe.args)
 }
 
 android {
     namespace = "com.videoviewervk"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.videoviewervk"
@@ -44,6 +45,10 @@ android {
     viewBinding {
         enable = true
     }
+    dataBinding {
+        enable = true
+    }
+
 }
 
 dependencies {
@@ -58,11 +63,14 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.bundles.room)
     implementation(libs.bundles.retrofit)
+    implementation(libs.bundles.navigation)
 
     implementation(libs.bundles.hilt)
     kapt(libs.hilt.compiler)
 
     implementation(libs.bundles.glide)
     implementation(libs.shimmer)
+    implementation(libs.androidx.lifecycle.livedata)
     implementation(libs.blurview)
+    implementation(libs.bundles.exoplayer)
 }

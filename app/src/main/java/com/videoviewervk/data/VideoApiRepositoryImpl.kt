@@ -6,9 +6,9 @@ import com.videoviewervk.domain.VideoApiRepository
 import javax.inject.Inject
 
 class VideoApiRepositoryImpl @Inject constructor(
-    context: Context
+    private val api: VideoApi
 ): VideoApiRepository {
     override suspend fun getVideos(): List<Video> {
-        TODO("Not yet implemented")
+        return api.getVideos()
     }
 }
