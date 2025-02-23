@@ -13,7 +13,7 @@ import androidx.media3.exoplayer.ExoPlayer
 import com.videoviewervk.presentation.util.NetworkFetchEvent
 
 class VideoPlayerFragmentViewModel: ViewModel() {
-    private var videoPosition: Long = 0L
+    var videoPosition: Long = 0L
     private var exoPlayer: ExoPlayer? = null
     private val _networkError = MutableLiveData<NetworkFetchEvent<String>>()
     val networkError: LiveData<NetworkFetchEvent<String>> get() = _networkError

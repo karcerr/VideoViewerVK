@@ -58,9 +58,6 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.swiperefreshlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.bundles.room)
     implementation(libs.bundles.retrofit)
     implementation(libs.bundles.navigation)
@@ -68,9 +65,17 @@ dependencies {
     implementation(libs.bundles.hilt)
     kapt(libs.hilt.compiler)
 
-    implementation(libs.bundles.glide)
+    implementation(libs.glide)
     implementation(libs.shimmer)
     implementation(libs.androidx.lifecycle.livedata)
     implementation(libs.blurview)
     implementation(libs.bundles.exoplayer)
+
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
+    testImplementation(libs.junit)
+    testImplementation(libs.mockk)
+    testImplementation(libs.core.testing)
 }

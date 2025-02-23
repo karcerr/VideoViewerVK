@@ -21,13 +21,13 @@ swiperefreshlayout = "1.1.0"
 blurview = "version-2.0.6"
 exoplayer = "1.5.1"
 navigation = "2.8.7"
-safe-args = "2.6.0"
+safe-args = "2.8.7"
+mockk = "1.13.3"
+coroutinesTest = "1.6.4"
+coreTest = "2.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
@@ -50,6 +50,13 @@ media3-ui = { module = "androidx.media3:media3-ui", version.ref = "exoplayer" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
 blurview = { module = "com.github.Dimezis:BlurView", version.ref = "blurview" }
+
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+coroutines-test = {module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest"}
+core-testing = {module = "androidx.arch.core:core-testing", version.ref = "coreTest"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -81,7 +88,4 @@ retrofit = [
     "retrofit",
     "retrofit-converter-gson",
     "okhttp",
-]
-glide = [
-    "glide"
 ]
