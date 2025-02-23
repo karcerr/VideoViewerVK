@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">VideoViewerVK</string>
-    <string name="duration_placeholder" translatable="false">Duration Placeholder</string>
-    <string name="title_placeholder" translatable="false">Title Placeholder</string>
     <string name="network_error">Couldn\'t fetch videos =(</string>
     <string name="fetching_error">Fetching error =(</string>
     <string name="check_your_internet_connection_and_refresh_the_page">Check your Internet connection and refresh the page</string>

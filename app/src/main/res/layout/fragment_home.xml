@@ -36,7 +36,6 @@
                     <include layout="@layout/video_item_shimmer"/>
                     <include layout="@layout/video_item_shimmer"/>
                     <include layout="@layout/video_item_shimmer"/>
-                    <include layout="@layout/video_item_shimmer"/>
                 </LinearLayout>
             </com.facebook.shimmer.ShimmerFrameLayout>
             <androidx.recyclerview.widget.RecyclerView
@@ -48,6 +47,39 @@
                     android:visibility="gone"
 
             />
+            <LinearLayout
+                    android:id="@+id/fetch_error_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TitleMedium"
+                        android:textColor="@color/red"
+                        android:textSize="28sp"
+                        android:text="@string/fetching_error"
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="9dp"
+                        android:layout_gravity="center_horizontal"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TitleMedium"
+                        android:textColor="@color/red"
+                        android:textSize="22sp"
+                        android:text="@string/check_your_internet_connection_and_refresh_the_page"
+                        android:gravity="center"
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="9dp"
+                        android:layout_gravity="center_horizontal"
+                />
+            </LinearLayout>
+
         </FrameLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>

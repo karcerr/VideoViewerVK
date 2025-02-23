@@ -2,6 +2,7 @@ package com.videoviewervk.presentation.feature.video_player
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.videoviewervk.R
@@ -22,6 +23,12 @@ class VideoPlayerFragment: Fragment(R.layout.fragment_video_player) {
         val args = VideoPlayerFragmentArgs.fromBundle(requireArguments())
         val videoUrl = args.videoUrl
         binding.playerView.player = viewModel.initializePlayer(requireContext(), videoUrl)
+
+        viewModel.networkError.observe(this) {
+            it.getContentIfNotHandled()?.let { content ->
+                Toast.makeText(context, content, Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
 

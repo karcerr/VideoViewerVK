@@ -1,8 +1,8 @@
 package com.videoviewervk.presentation.feature.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -50,11 +50,15 @@ class HomeScreenFragment: Fragment(R.layout.fragment_home) {
     private fun setUpObservers() {
         viewModel.videoList.observe(this) { videos ->
             binding.swipeRefreshLayout.isRefreshing = false
-            if (videos.isEmpty())
-                showShimmer()
-            else {
-                adapter.submitList(videos)
+            adapter.submitList(videos)
+            if (videos.isNotEmpty()) {
                 hideShimmer()
+                binding.fetchErrorLayout.visibility = View.GONE
+            }
+        }
+        viewModel.networkError.observe(this) {
+            it.getContentIfNotHandled()?.let {
+                showNetworkErrorMessage()
             }
         }
     }
@@ -67,5 +71,10 @@ class HomeScreenFragment: Fragment(R.layout.fragment_home) {
         binding.shimmerLayout.visibility = View.GONE
         binding.recyclerView.visibility = View.VISIBLE
         binding.shimmerLayout.stopShimmer()
+    }
+    private fun showNetworkErrorMessage() {
+        Toast.makeText(context, getString(R.string.network_error), Toast.LENGTH_SHORT).show()
+        hideShimmer()
+        binding.fetchErrorLayout.visibility = View.VISIBLE
     }
 }

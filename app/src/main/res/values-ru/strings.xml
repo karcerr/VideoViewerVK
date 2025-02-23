@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VideoViewerVK</string>
+    <string name="network_error">Произошла ошибка при загрузке видео =(</string>
+    <string name="fetching_error">Ошибка загрузки =(</string>
+    <string name="check_your_internet_connection_and_refresh_the_page">Проверьте подключение к Интернету и обновите страницу.</string>
+</resources>
